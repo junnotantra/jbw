@@ -114,7 +114,10 @@ hr.small {
     max-width: 100px;
 }
 
-
+hr.smallwhite {
+    max-width: 100px;
+	border-color: white;
+}
 /* Side Menu */
 
 #sidebar-wrapper {
@@ -288,7 +291,6 @@ hr.small {
 .call-to-action .btn {
     margin: 10px;
 }
-
 
 /* Map */
 
