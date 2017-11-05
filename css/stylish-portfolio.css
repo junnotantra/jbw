@@ -47,7 +47,7 @@ body {
     font-weight: 700;
     margin: 0;
     padding: 0;
-    font-family: "Sacramento", Arial, serif;
+	font-family: 'Lobster', cursive;
 	color: #fff;
 }
 
@@ -58,7 +58,7 @@ body {
 .container > h2 {
     font-size: 4em;
     font-weight: 500;
-    font-family: "Sacramento", Arial, serif;
+	font-family: 'Lobster', cursive;
 	color: #007bff;
 }
 
@@ -70,7 +70,7 @@ body {
 .mx-auto > h2 {
     font-size: 4em;
     font-weight: 500;
-    font-family: "Sacramento", Arial, serif;
+	font-family: 'Lobster', cursive;
 }
 
 .services .mx-auto > h3 {
