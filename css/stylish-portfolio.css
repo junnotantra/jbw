@@ -47,7 +47,7 @@ body {
     font-weight: 700;
     margin: 0;
     padding: 0;
-	font-family: 'Lobster', cursive;
+    font-family: "Sacramento", Arial, serif;
 	color: #fff;
 }
 
@@ -58,7 +58,7 @@ body {
 .container > h2 {
     font-size: 4em;
     font-weight: 500;
-	font-family: 'Lobster', cursive;
+    font-family: "Sacramento", Arial, serif;
 	color: #007bff;
 }
 
@@ -70,7 +70,7 @@ body {
 .mx-auto > h2 {
     font-size: 4em;
     font-weight: 500;
-	font-family: 'Lobster', cursive;
+    font-family: "Sacramento", Arial, serif;
 }
 
 .services .mx-auto > h3 {
@@ -390,6 +390,33 @@ footer {
   text-transform: uppercase;
   font-size: 10px;
   /* words */
+}
+
+#easter-container {
+	position: fixed;
+	z-index: 99;
+	top: 0px;
+	width:100%;
+	color: #fff;
+	text-align: center;
+}
+
+#easter-container #easter-key {
+	display: inline-block;
+}
+
+#easter-container .key {
+  display: table-cell;
+  vertical-align: middle;
+  height: 25px;
+  width: 25px;
+  background: rgba(0, 123, 255, 0.5);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
 }
 
 /* Couple */

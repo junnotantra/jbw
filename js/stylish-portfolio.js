@@ -86,6 +86,72 @@ var onMapClickHandler = function(event) {
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
 
+(function (EasterEgg, $) {
+  var pos = 0;
+  var patternDisplay= ['↑', '↑', '↓', '↓', '←', '→', '←', '→', 'B', 'A'];
+  var active= false;
+  new EasterEgg({
+    pattern: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+    patternTouch: ['↑', '↑', '↓', '↓', '←', '→', '←', '→', 'tap', 'tap'],
+
+    /* onSuccess can either be an url or a function. */
+    // onSuccess: 'http://google.com',
+    onSuccess: function() {
+	  pos = 0;
+      $('#easter-key').html('');
+	  $('#open-invitation').trigger('click');
+    },
+
+    onCorrectInput: function(entered, current, pattern) {
+	  active = true;
+      $('#easter-key').append('<span class="key">' + patternDisplay[pos] + '</span>');
+	  pos = pos + 1;
+    },
+
+    onComboBreak: function(entered, current, pattern) {
+	  if(active){
+		  pos = 0;
+		  $('#easter-key').html('');
+		  active = false;
+	  }
+    }
+  });
+
+})(window.easterEgg, window.jQuery);
+
+(function (EasterEgg, $) {
+  var pos = 0;
+  var patternDisplay= ['X','T','R','E','M','A','X'];
+  var active= false;
+  new EasterEgg({
+    pattern: [88, 84, 82, 69, 77, 65, 88],
+
+    /* onSuccess can either be an url or a function. */
+    // onSuccess: 'http://google.com',
+    onSuccess: function() {
+	  pos = 0;
+      $('#easter-key').html('');
+	  alert('Xtreme to the max');
+    },
+
+    onCorrectInput: function(entered, current, pattern) {
+	  active = true;
+      $('#easter-key').append('<span class="key">' + patternDisplay[pos] + '</span>');
+	  pos = pos + 1;
+    },
+
+    onComboBreak: function(entered, current, pattern) {
+	  if(active){
+		  pos = 0;
+		  $('#easter-key').html('');
+		  active = false;
+	  }
+    }
+  });
+
+})(window.easterEgg, window.jQuery);
+
+
 simplyCountdown('.simply-countdown', {
             year: 2017, // required
             month: 12, // required
